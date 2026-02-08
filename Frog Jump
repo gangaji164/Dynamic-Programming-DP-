@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int frogJump(vector<int>& heights) {
+        int prev=0;
+        inr prev2=0;
+        
+        for(int i=0;i<n;i++){
+            int l=prev+abs(heights(i)+heights(i-1));
+            int r=INT_MAX;
+            if(i<1){
+            r=prev2+abs(heights(i)+heights(i-2));}
+            int cur=min(prev,prev2);
+            prev2=prev;
+            prev=cur;
+
+        }
+        return prev;
+    }
+};
